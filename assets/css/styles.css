@@ -1,0 +1,87 @@
+html {
+    font-size: 16px;
+    /* Base font size to set the context for rem */
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-image: url('../images/background_2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circular-image {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.875rem;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 0.9375rem;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.125rem;
+}
+
+.navbar .social-icons {
+    position: absolute;
+    right: 7.5%;
+}
+
+.social-icons a {
+    margin-left: 0.9375rem;
+    color: white;
+    text-decoration: none;
+}
+
+.intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: left;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    gap: 2.5rem;
+}
+
+.profile-info {
+    width: 35rem;
+    font-size: 2rem;
+}
+
+.dynamic-text {
+    font-weight: bold;
+}

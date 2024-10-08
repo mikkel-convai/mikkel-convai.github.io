@@ -1,44 +1,60 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mikkel Skræddergaard - AI and Software Engineer">
-    <link rel="stylesheet" href="styles.css">
-    <title>Mikkel Skræddergaard | AI & Software Engineer</title>
-</head>
-<body>
-    <header>
-        <h1>Mikkel Skræddergaard</h1>
-        <p>AI & Software Engineer | App Developer</p>
-        <p><em>Innovating with purpose, coding with passion.</em></p>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mikkel Skræddergaard</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#gymnastics">Gymnastics</a></li>
+      </ul>
+      <div class="social-icons">
+        <a href="https://github.com/mikkel-convai" target="_blank">Github</a>
+        <a
+          href="https://www.linkedin.com/in/mikkelskraeddergaard/"
+          target="_blank"
+          >LinkedIn</a
+        >
+      </div>
+    </nav>
 
-    <section>
-        <h2>A bit about me</h2>
-        <p>I love my craft. Specialize in AI and Flutter. I love everything software.</p>
+    <section class="intro-section">
+      <div class="intro-content">
+        <div class="profile-info">
+          <h1>Mikkel Skræddergaard</h1>
+          <p>Creating value through:</p>
+          <p><span id="changingText" class="dynamic-text"></span></p>
+        </div>
+        <div class="profile-picture">
+          <picture>
+            <source
+              srcset="assets/images/profile_picture.png"
+              type="image/png"
+            />
+            <source
+              srcset="assets/images/profile_picture.webp"
+              type="image/webp"
+            />
+            <img
+              src="assets/images/profile_picture.jpg"
+              alt="Profile picture"
+              class="circular-image"
+            />
+          </picture>
+        </div>
+      </div>
     </section>
 
-    <section>
-        <h2>Personal and Professional Profile</h2>
-        <p>Optimistic and down to earth guy who wants to work with what he loves. My ambition is to make the world a slightly better place, and my preferred tools are AI and app development. I am curious and always trying to get better at my craft, focusing on fundamentals like testing, design patterns, and CI/CD. A former elite gymnast, I now enjoy CrossFit, where I've developed a growth mindset.</p>
-    </section>
-
-    <section>
-        <h2>Experience</h2>
-        <h3>Convai (Data Scientist & ML Engineer)</h3>
-        <p>October 2023 – Now</p>
-        <ul>
-            <li>Developing ML/AI models for medical apps</li>
-            <li>Building student support AI agents based on LLMs</li>
-            <li>Customizing chatbots and deploying them</li>
-            <li>Creating a football tactics game in Flutter</li>
-            <li>CI/CD implementation in Azure</li>
-        </ul>
-
-        <h3>The Productive Pickle (Hobby Company)</h3>
-        <p>January 2020 – July 2021</p>
-        <ul>
-            <li>Developed and deployed apps and websites</li>
-            <li>
-                <!-- Rest of the content -->
+    <script src="assets/js/dynamic_text.js"></script>
+  </body>
+</html>
