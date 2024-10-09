@@ -1,9 +1,10 @@
 const values = [
-  "AI and Innovation",
   "Healthcare Solutions",
   "Education Technology",
   "Environmental Sustainability",
-  "Cutting-edge Development",
+  "ML/DL Models",
+  "AI Agents",
+  "Flutter Apps",
 ];
 let index = 0;
 

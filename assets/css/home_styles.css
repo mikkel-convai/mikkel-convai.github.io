@@ -1,0 +1,130 @@
+html {
+    font-size: 16px;
+    /* Base font size to set the context for rem */
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-image: url('../images/background.jpg');
+    /* Ensure correct path */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circular-image {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Add subtle shadow to profile picture */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.875rem;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 0.9375rem;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.125rem;
+    padding: 0.5rem 1rem;
+    transition: text-decoration 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+    /* Add white underline on hover */
+}
+
+.navbar .social-icons {
+    position: absolute;
+    right: 7.5%;
+}
+
+.social-icons a {
+    margin-left: 0.9375rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f0e68c;
+    /* Light yellow hover effect */
+}
+
+.intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    /* Increase padding for more space */
+    border-radius: 0.625rem;
+    gap: 2.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark background overlay */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow */
+}
+
+.profile-info {
+    width: 40rem;
+    /* Make the text section larger */
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Add text shadow for better contrast */
+}
+
+h1 {
+    font-size: 3rem;
+    /* Make the main header larger */
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #f0e68c;
+    /* Light yellow color */
+}
+
+.dynamic-text {
+    font-weight: bold;
+    font-size: 1.75rem;
+    color: #ffffff;
+}
+
+p {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+}
