@@ -26,58 +26,6 @@ html {
     /* Add subtle shadow to profile picture */
 }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.875rem;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-}
-
-.navbar ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar ul li {
-    margin: 0 0.9375rem;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.125rem;
-    padding: 0.5rem 1rem;
-    transition: text-decoration 0.3s ease;
-}
-
-.navbar ul li a:hover {
-    text-decoration: underline;
-    /* Add white underline on hover */
-}
-
-.navbar .social-icons {
-    position: absolute;
-    right: 7.5%;
-}
-
-.social-icons a {
-    margin-left: 0.9375rem;
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #f0e68c;
-    /* Light yellow hover effect */
-}
-
 .intro-section {
     display: flex;
     justify-content: center;
