@@ -1,12 +1,12 @@
 const values = [
   "Healthcare Solutions",
-  "Education Technology",
-  "Environmental Sustainability",
   "ML/DL Models",
+  "Education Technology",
+  "Cross Platform Apps",
+  "Environmental Sustainability",
   "AI Agents",
-  "Flutter Apps",
 ];
-let index = 0;
+let index = Math.floor(Math.random() * values.length);
 
 function changeText() {
   document.getElementById("changingText").textContent = values[index];

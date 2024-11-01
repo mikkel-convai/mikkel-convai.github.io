@@ -17,39 +17,36 @@
     /* Additional Shades */
     --border-color: var(--teal);
     --highlight: var(--soft-green);
-    --yellow-highlight: #f0e68c;
-
-    /* General Spacing */
-    --gap: 1.6rem;
 }
 
-/* General Styles */
+/* General styles for all pages */
 html {
     font-size: 16px;
-    box-sizing: border-box;
 }
 
-* {
-    box-sizing: inherit;
-}
-
+/* Prevent horizontal scrolling */
 body,
 html {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    background-color: var(--background);
-    color: var(--text-dark);
+    background-color: var(--dark-blue);
+    color: var(--text-light);
     height: 100%;
     overflow-x: hidden;
 }
 
-/* Navbar Styles */
+/* Add this if there are other elements potentially causing overflow */
+* {
+    box-sizing: border-box;
+    /* Ensure padding and borders are included in the element's total width and height */
+}
+
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 1.875rem;
     position: absolute;
     width: 100%;
     top: 0;
@@ -57,12 +54,17 @@ html {
     background-color: var(--dark-blue);
 }
 
+/* Navbar css */
 .navbar ul {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
+/* 
+.navbar ul li {
+    margin: 0 0.9375rem;
+} */
 
 .navbar ul li a {
     color: var(--text-light);
@@ -76,23 +78,23 @@ html {
     text-decoration: underline;
 }
 
-.social-icons {
+.navbar .social-icons {
     position: absolute;
     right: 7.5%;
 }
 
 .social-icons a {
     margin-left: 0.9375rem;
-    color: var(--text-light);
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: var(--yellow-highlight);
+    color: #f0e68c;
 }
 
-/* Home/Intro Page Styles */
+/* Styles for the home/intro page */
 .intro-section {
     display: flex;
     justify-content: center;
@@ -101,7 +103,6 @@ html {
     text-align: left;
     position: relative;
     z-index: 1;
-    background-color: var(--dark-blue);
 }
 
 .intro-content {
@@ -114,81 +115,117 @@ html {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.circular-image {
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
 .profile-info {
     width: 40rem;
     font-size: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    color: var(--text-light);
 }
 
-.intro-section h1 {
+h1 {
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--highlight);
+    color: #f0e68c;
 }
 
 .dynamic-text {
     font-weight: bold;
     font-size: 1.75rem;
-    color: var(--text-light);
+    color: #ffffff;
 }
 
-.intro-section p {
+p {
     margin: 0.5rem 0;
     font-size: 1.25rem;
 }
 
-/* Section Layout */
+/* ------------------- Styles for the gymnastics section ------------------- */
 .section {
     text-align: center;
     padding-top: 8rem;
-    color: var(--text-light);
+    color: white;
 }
 
-.section h1 {
+.gymnastics-section {
+    text-align: center;
+    padding-top: 8rem;
+    color: white;
+}
+
+.gymnastics-section h1 {
     font-size: 3rem;
-    font-weight: 600;
     margin-bottom: 2rem;
-    color: var(--highlight);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.section h2 {
+.gymnastics-section h2 {
     font-size: 2rem;
-    color: var(--highlight);
-    margin: 2rem 0;
+    margin: 0;
 }
 
-.section a {
-    color: var(--highlight);
+.gymnastics-section a {
     text-decoration: none;
+    color: white;
 }
 
-.section a:hover {
-    color: var(--yellow-highlight);
+.videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
-/* Skill Card Styles */
+iframe {
+    width: 80%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+}
+
+/* ------------------- Styles for the skills section ------------------- */
+/* Styles for the skills section */
+:root {
+    --color-dark: #16161A;
+    --color-gray: #242629;
+    --color-light-gray: #94A1B2;
+    --color-white: #FFFFFE;
+    --color-green: #2CB67D;
+    --gap: 1.6rem;
+}
+
+.skills-section {
+    text-align: center;
+    padding-top: 8rem;
+    color: white;
+}
+
+.skills-section h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #f0e68c;
+    /* Match color to gymnastics page */
+    text-align: center;
+}
+
+.tier-group {
+    padding-bottom: 4rem;
+}
+
+/* Skill Cards */
 .micro-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--gap);
-    padding-bottom: 2rem;
 }
 
 .micro-card {
-    color: var(--text-light);
-    background-color: var(--dark-blue);
+    color: var(--color-white);
+    background-color: var(--color-gray);
     width: 8rem;
     height: 8rem;
     padding: 1.6rem 2.4rem;
@@ -203,17 +240,19 @@ html {
 
 .micro-card:hover {
     transform: scale(1.1);
-    background-color: var(--highlight);
-    color: var(--dark-blue);
+    background-color: var(--color-green);
+    color: var(--color-dark);
     font-weight: bold;
 }
 
-.micro-card .rot {
+/* Add Rotation Effect to Icons */
+.rot {
     transition: transform 0.5s ease;
 }
 
 .micro-card:hover .rot {
     transform: rotate(360deg);
+    /* Rotate the icon on hover */
 }
 
 .skill-card span {
@@ -221,7 +260,8 @@ html {
     margin-top: 0.8rem;
 }
 
-/* Project Timeline Styles */
+/* ------------------- Styles for the projects section ------------------- */
+/* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
     max-width: 1200px;
@@ -233,7 +273,7 @@ html {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: var(--teal);
+    background-color: white;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -255,8 +295,8 @@ html {
     width: 25px;
     height: 25px;
     right: -17px;
-    background-color: var(--light-mint);
-    border: 4px solid var(--highlight);
+    background-color: white;
+    border: 4px solid #f0e68c;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -315,7 +355,7 @@ html {
 
 .content h3 {
     margin-bottom: 5%;
-    color: var(--highlight);
+    color: #f0e68c;
     text-align: center;
 }
 
@@ -325,75 +365,59 @@ html {
     text-align: center;
 }
 
+/* Minimalist styling for the link */
 .container .content a {
-    color: var(--teal);
-    font-weight: 600;
+    color: black;
+    font-weight: normal;
     font-size: 1rem;
     padding: 0.25rem 0.5rem;
-    border: 1px solid transparent;
     border-radius: 4px;
-    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-bottom 0.3s ease;
 }
 
+/* Hover effect */
 .container .content a:hover {
-    color: var(--soft-green);
-    /* Slightly lighter color on hover */
-    background-color: rgba(36, 54, 66, 0.1);
-    /* Light overlay of --dark-blue */
-    border-color: var(--teal);
-    /* Visible border to enhance the link appearance */
+    padding: 0.25rem 0.5rem;
+    color: #f0e68c;
     text-decoration: underline;
+    text-decoration-color: #f0e68c;
+    background-color: black;
 }
 
 .project-img {
     height: 10rem;
 }
 
-/* Video Embeds for Gymnastics */
-.videos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding-bottom: 2rem;
-}
-
-.videos h2 {
-    margin: 0;
-}
-
-iframe {
-    width: 80%;
-    max-width: 560px;
-    height: 315px;
-    border: none;
-}
-
-/* Media Queries for Responsive Design */
+/* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
+
+    /* Place the timelime to the left */
     .timeline::after {
         left: 31px;
     }
 
+    /* Full-width containers */
     .container {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
 
+    /* Make sure that all arrows are pointing leftwards */
     .container::before {
         left: 60px;
-        border: medium solid var(--text-light);
+        border: medium solid white;
         border-width: 10px 10px 10px 0;
-        border-color: transparent var(--text-light) transparent transparent;
+        border-color: transparent white transparent transparent;
     }
 
+    /* Make sure all circles are at the same spot */
     .left::after,
     .right::after {
         left: 15px;
     }
 
+    /* Make all right containers behave like the left ones */
     .right {
         left: 0%;
     }

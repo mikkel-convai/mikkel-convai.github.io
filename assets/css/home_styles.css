@@ -1,6 +1,26 @@
+:root {
+    /* Primary Colors */
+    --dark-blue: #243642;
+    --teal: #387478;
+    --soft-green: #629584;
+    --light-mint: #E2F1E7;
+
+    /* Text Colors */
+    --text-dark: var(--dark-blue);
+    --text-light: var(--light-mint);
+
+    /* Accent Colors */
+    --button-bg: var(--teal);
+    --button-hover: var(--soft-green);
+    --background: var(--light-mint);
+
+    /* Additional Shades */
+    --border-color: var(--teal);
+    --highlight: var(--soft-green);
+}
+
 html {
     font-size: 16px;
-    /* Base font size to set the context for rem */
 }
 
 body,
@@ -8,11 +28,8 @@ html {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    background-image: url('../images/background.jpg');
-    /* Ensure correct path */
-    background-size: cover;
-    background-position: center;
-    color: white;
+    background-color: var(--background);
+    color: var(--text-dark);
     height: 100%;
     overflow: hidden;
 }
@@ -23,7 +40,6 @@ html {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    /* Add subtle shadow to profile picture */
 }
 
 .intro-section {
@@ -34,42 +50,37 @@ html {
     text-align: left;
     position: relative;
     z-index: 1;
+    background-color: var(--dark-blue);
 }
 
 .intro-content {
     display: flex;
     align-items: center;
     padding: 2rem;
-    /* Increase padding for more space */
     border-radius: 0.625rem;
     gap: 2.5rem;
     background: rgba(0, 0, 0, 0.6);
-    /* Dark background overlay */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    /* Subtle shadow */
 }
 
 .profile-info {
     width: 40rem;
-    /* Make the text section larger */
     font-size: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    /* Add text shadow for better contrast */
+    color: var(--text-light);
 }
 
 h1 {
     font-size: 3rem;
-    /* Make the main header larger */
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #f0e68c;
-    /* Light yellow color */
+    color: var(--highlight);
 }
 
 .dynamic-text {
     font-weight: bold;
     font-size: 1.75rem;
-    color: #ffffff;
+    color: var(--text-light);
 }
 
 p {
