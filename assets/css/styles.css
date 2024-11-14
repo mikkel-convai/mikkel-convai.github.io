@@ -48,6 +48,7 @@ html {
 .navbar {
     display: flex;
     justify-content: center;
+    /* Adjust spacing for the toggle button */
     align-items: center;
     padding: 1rem;
     position: absolute;
@@ -64,6 +65,11 @@ html {
     padding: 0;
 }
 
+.navbar ul li {
+    margin: 0;
+    padding: 0;
+}
+
 .navbar ul li a {
     color: var(--text-light);
     text-decoration: none;
@@ -76,9 +82,10 @@ html {
     text-decoration: underline;
 }
 
+/* Social icons positioned to the right */
 .social-icons {
     position: absolute;
-    right: 7.5%;
+    right: 1rem;
 }
 
 .social-icons a {
@@ -90,6 +97,52 @@ html {
 
 .social-icons a:hover {
     color: var(--yellow-highlight);
+}
+
+/* Hamburger toggle button */
+.navbar-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--text-light);
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 1000px) {
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .navbar ul {
+        display: none;
+        /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 3.5rem;
+        /* Below the navbar */
+        right: 0;
+        left: 0;
+        background-color: var(--dark-blue);
+        padding: 1rem;
+        z-index: 5;
+    }
+
+    .navbar ul.active {
+        display: flex;
+        /* Show menu when active */
+    }
+
+    .navbar ul li a {
+        padding: 1rem;
+        text-align: center;
+        /* Center align items */
+    }
+
+    .navbar-toggle {
+        display: block;
+        /* Show toggle button */
+    }
 }
 
 /* Home/Intro Page Styles */
@@ -145,6 +198,34 @@ html {
 .intro-section p {
     margin: 0.5rem 0;
     font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .intro-section,
+        .section {
+            height: auto;
+            /* Allow content to dictate height */
+            min-height: 100vh;
+            /* Ensure it covers the viewport if content is minimal */
+            padding: 2rem;
+        }
+
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .profile-info {
+        width: 100%;
+    }
+
+    .circular-image {
+        width: 15rem;
+        height: 15rem;
+        margin: 1rem auto;
+    }
 }
 
 /* Section Layout */
