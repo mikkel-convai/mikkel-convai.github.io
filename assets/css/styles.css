@@ -438,9 +438,15 @@ html {
 
 .project-img {
     /* height: 10rem; */
-    max-width: 100%;
+    max-width: 45%;
     height: auto;
 }
+
+.project-img-full-width {
+        /* height: 10rem; */
+        max-width: 100%;
+        height: auto;
+    }
 
 /* Video Embeds for Gymnastics */
 .videos {
