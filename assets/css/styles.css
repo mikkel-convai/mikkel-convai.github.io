@@ -471,16 +471,24 @@ iframe {
 /* Blog */
 .intro-text {
     text-align: center;
-    color: #555;
+    color: var(--text-dark);
+    /* Matches the primary text color */
     margin-bottom: 20px;
+    font-size: 1.1rem;
+    /* Slightly larger for readability */
 }
 
 .intro-text a {
-    color: #3498db;
+    color: var(--highlight);
+    /* Use highlight color for links */
     text-decoration: none;
+    font-weight: bold;
+    /* Emphasize the links */
 }
 
 .intro-text a:hover {
+    color: var(--yellow-highlight);
+    /* Use yellow highlight on hover */
     text-decoration: underline;
 }
 
@@ -494,8 +502,10 @@ iframe {
 }
 
 .post {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--light-mint);
+    /* Background matches your theme */
+    border: 1px solid var(--teal);
+    /* Border matches the accent color */
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -520,21 +530,26 @@ iframe {
 .post h2 {
     font-size: 1.2rem;
     margin: 10px 0;
+    color: var(--dark-blue);
+    /* Matches your text-dark variable */
 }
 
 .post h2 a {
     text-decoration: none;
-    color: #333;
+    color: var(--text-dark);
+    /* Ensures consistent link color */
 }
 
 .post h2 a:hover {
-    color: #3498db;
+    color: var(--highlight);
+    /* Highlight color on hover */
 }
 
 .post p {
     font-size: 0.95rem;
     margin: 10px 0;
-    color: #666;
+    color: var(--text-dark);
+    /* Matches body text color */
 }
 
 .post-tags {
@@ -544,12 +559,15 @@ iframe {
 
 .post-tags span {
     display: inline-block;
-    background-color: #3498db;
-    color: #fff;
+    background-color: var(--button-bg);
+    /* Uses button background color */
+    color: var(--text-light);
+    /* Text light for contrast */
     border-radius: 3px;
     padding: 5px 8px;
     margin-right: 5px;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 
